@@ -15,6 +15,7 @@ public class App {
         System.out.println("java swing example..");
         System.out.println("finish");
         System.out.println("terza");
+        System.out.println("stampa di prova");
     }
     
 }
