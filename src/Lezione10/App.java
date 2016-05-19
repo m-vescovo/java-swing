@@ -17,6 +17,7 @@ public class App {
  
        Container contentPane = f.getContentPane();
        
+       contentPane.setLayout(null);//blocca il layout di standard
        JButton cmd = new JButton ("invia");
        cmd.setBounds(10, 10, 50, 20);
        contentPane.add(cmd);
