@@ -2,6 +2,7 @@
 package Lezione10;
 
 import java.awt.Container;
+import java.awt.FlowLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
@@ -17,12 +18,19 @@ public class App {
  
        Container contentPane = f.getContentPane();
        
-       contentPane.setLayout(null);//blocca il layout di standard
+       contentPane.setLayout(new FlowLayout(FlowLayout.LEFT));//stabilisco le proprietà varie se aggiungo altri botoni li affianca finoa riempire 
+       
+    //contentPane.setLayout(null);//blocca il layout manager standard se metto null
        JButton cmd = new JButton ("invia");
        cmd.setBounds(50, 50, 100, 50);
        contentPane.add(cmd);
        
-       f.setVisible(true);//visualizzo la finestra
+       JButton cmd1 = new JButton ("invia1"); //le dimensioni sono date dal testo contenuto perchè ho messo il FlowLayout
+        contentPane.add(cmd1);
+        cmd1.setPreferredSize(new Dimension(200, 50));//dimensione preferita
+        
+        
+        f.setVisible(true);//visualizzo la finestra come è stata costruita prima
                
     }
     
